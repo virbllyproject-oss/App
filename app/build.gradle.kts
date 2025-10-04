@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.nieruchomosci"
+    namespace = "com.nieruchomosci.app"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.nieruchomosci"
+        applicationId = "com.nieruchomosci.app"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -56,14 +56,14 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)
-    implementation(libs.appcompat)
 
-    // Compose
+    // Compose & Navigation
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.graphics)
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)
+    implementation(libs.navigation.compose)
 
     // Room (Database)
     implementation(libs.room.runtime)
@@ -72,7 +72,4 @@ dependencies {
 
     // Testing
     testImplementation(libs.junit)
-    testImplementation("io.mockk:mockk:1.13.8")
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
-    testImplementation("app.cash.turbine:turbine:1.0.0")
 }
